@@ -86,6 +86,7 @@ class CatalogController extends Controller
             'custom_price_text' => $v->custom_price_text,
             'sale_badge' => $v->sale_badge,
             'base_price' => $v->basePrice(),
+            'image' => $v->gallery[0] ?? null,
             'no_same_day' => $v->no_same_day,
             'sort_order' => $v->sort_order,
             'features' => $v->features->map->only(['id', 'name'])->all(),

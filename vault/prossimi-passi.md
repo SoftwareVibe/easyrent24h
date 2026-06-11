@@ -27,14 +27,18 @@ L'analisi "black box" (vecchio punto 2) **non serve più**.
 Monorepo `backend/` (Laravel 12) + `frontend/` (Vue 3) su GitHub `SoftwareVibe/easyrent24h`.
 Modello dati + seeder ETL da `data/catalog-export.json` (14 località, 31 condizioni, 5 extra, 19 veicoli), `PriceResolver`/`AvailabilityEngine`/`QuoteService`/`BookingService` (34 test verdi sui casi d'oro), API REST e SPA con flusso ricerca → catalogo → preventivo live → prenotazione. Stato dettagliato nell'intestazione di `piano-implementazione.md`.
 
-### 3. Completamento Gate 3/4 ⬅️ PROSSIMO PUNTO
-- Confronto live col sito attuale: 5 combinazioni veicolo/date/località (fasce e totali identici).
-- Lighthouse ≥ 90 sul catalogo; meta/hreflang/sitemap.
-- Test di concorrenza su MySQL (lock già implementato in `BookingService`).
-- Immagini/gallery veicoli (gli ID `_thumbnail_id` sono nell'export; i file stanno in `public_html/wp-content/uploads`).
+### 3. ~~Completamento Gate 3/4~~ ✅ FATTO (11/06/2026) — vedi `gate-3-4-report.md`
+- Confronto live: **5/5 identici** (totali E liste fasce) — script riproducibile in `scripts/live-compare.ps1`.
+- Lighthouse catalogo: **performance 99**, SEO 100, best-practices 100, a11y 95; robots/sitemap/meta OG aggiunti.
+- Concorrenza su MySQL: 2 prenotazioni simultanee su stock 1 → una 201, una 422. Lock ok.
+- Immagini veicoli recuperate dall'FTP, ottimizzate (webp 640px, 6,6 MB → ~0,5 MB) e in card.
+- Residuo rimandato allo Step 8: hreflang/URL localizzati (richiede SSR/prerender).
 
-### 4. Step 5–8 del piano
-Checkout/pagamenti (Stripe + PayPal, acconto 25–30% ex AWCDP), email transazionali, admin (Filament: calendario, blocchi, listini), modulo affiliati (riscrittura sicura di `backend_rapp` con QR coupon), contenuti/SEO/redirect 301/cutover.
+### 4. Step 5 — Checkout e pagamenti ⬅️ PROSSIMO PUNTO
+Checkout custom: dati cliente, acconto 25–30% (ex AWCDP), Stripe + PayPal sandbox, email di conferma nelle 3 lingue, stati ordine che liberano/occupano il calendario, coupon (incl. eccezioni coupon-hub da configurazione).
+
+### 5. Step 6–8 del piano
+Admin (Filament: calendario, blocchi, listini), modulo affiliati (riscrittura sicura di `backend_rapp` con QR coupon), contenuti/SEO/redirect 301/cutover.
 
 ---
 

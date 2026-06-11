@@ -5,3 +5,7 @@
 # OS
 Thumbs.db
 .DS_Store
+
+# Artefatti di verifica locali
+frontend/lighthouse-catalog.json
+

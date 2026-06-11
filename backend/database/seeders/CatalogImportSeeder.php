@@ -26,6 +26,7 @@ use Illuminate\Support\Str;
 class CatalogImportSeeder extends Seeder
 {
     private const EXPORT_PATH = __DIR__.'/../../../data/catalog-export.json';
+    private const IMAGES_PATH = __DIR__.'/../../../data/vehicle-images.json';
 
     /** Ex $globalAgerolaList / $globalPositanoList (per nome località). */
     private const HUB_LOCATIONS = [
@@ -297,6 +298,11 @@ class CatalogImportSeeder extends Seeder
         $byId = collect($vehicles)->keyBy('id');
         $map = [];
 
+        $imagePath = realpath(self::IMAGES_PATH) ?: self::IMAGES_PATH;
+        $images = is_file($imagePath)
+            ? json_decode(file_get_contents($imagePath), true)
+            : [];
+
         $groups = [];
         foreach ($tridGroups as $members) {
             $present = collect($members)->filter(fn ($m) => $byId->has($m['element_id']));
@@ -338,6 +344,7 @@ class CatalogImportSeeder extends Seeder
                     'sale_badge' => $this->metaVal($meta, 'sale') ?: null,
                     'video_url' => $this->metaVal($meta, 'video_url') ?: null,
                     'no_same_day' => $legacyIds->intersect(self::NO_SAME_DAY_LEGACY_IDS)->isNotEmpty(),
+                    'gallery' => isset($images[(string) $primary['id']]) ? [$images[(string) $primary['id']]] : null,
                     'sort_order' => (int) ($primary['menu_order'] ?? 0),
                     'active' => $primary['status'] === 'publish',
                     'translations' => $group->mapWithKeys(fn ($m) => [$m['lang'] => [

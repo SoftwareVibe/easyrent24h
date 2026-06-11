@@ -175,7 +175,7 @@ async function submit() {
         </div>
 
         <div v-if="quote?.extras?.length" class="extras">
-          <h4>{{ t('booking.extras') }}</h4>
+          <h3>{{ t('booking.extras') }}</h3>
           <div v-for="extra in quote.extras" :key="extra.id" class="extras__row">
             <label>
               <input
@@ -273,8 +273,9 @@ async function submit() {
   margin-top: 1.2rem;
 }
 
-.extras h4 {
+.extras h3 {
   margin: 0 0 0.5rem;
+  font-size: 1.05rem;
 }
 
 .extras__row {

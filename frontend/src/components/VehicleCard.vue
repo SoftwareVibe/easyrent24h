@@ -5,6 +5,7 @@ const { t } = useI18n()
 
 defineProps({
   vehicle: { type: Object, required: true },
+  eager: { type: Boolean, default: false },
 })
 
 defineEmits(['book'])
@@ -13,8 +14,20 @@ defineEmits(['book'])
 <template>
   <article class="vehicle card">
     <div class="vehicle__badge" v-if="vehicle.sale_badge">{{ vehicle.sale_badge }}</div>
+    <div class="vehicle__media">
+      <img
+        v-if="vehicle.image"
+        :src="vehicle.image"
+        :alt="vehicle.name"
+        :loading="eager ? 'eager' : 'lazy'"
+        :fetchpriority="eager ? 'high' : 'auto'"
+        decoding="async"
+        width="640"
+        height="420"
+      />
+    </div>
     <div class="vehicle__body">
-      <h3>{{ vehicle.name }}</h3>
+      <h2>{{ vehicle.name }}</h2>
       <p v-if="vehicle.subheader" class="vehicle__subheader">{{ vehicle.subheader }}</p>
       <ul class="vehicle__features">
         <li v-for="feature in vehicle.features.slice(0, 4)" :key="feature.id">{{ feature.name }}</li>
@@ -56,13 +69,26 @@ defineEmits(['book'])
   padding: 0.2rem 0.5rem;
 }
 
+.vehicle__media {
+  height: 190px;
+  background: #fff;
+}
+
+.vehicle__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .vehicle__body {
   padding: 1.2rem 1.2rem 0;
   flex: 1;
 }
 
-.vehicle__body h3 {
+.vehicle__body h2 {
   margin: 0;
+  font-size: 1.25rem;
 }
 
 .vehicle__subheader {
