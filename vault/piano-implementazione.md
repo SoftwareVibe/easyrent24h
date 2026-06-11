@@ -4,6 +4,14 @@
 > Ogni step termina con un **GATE**: criteri verificabili che devono essere soddisfatti prima di passare allo step successivo.
 > Basato su: `analisi-easyrent24h.md` (in particolare §10 – logica esatta del motore estratta dai sorgenti FTP).
 > Ultimo aggiornamento: 2026-06-11.
+>
+> **Stato avanzamento (11/06/2026):**
+> - ✅ **STEP 0** — monorepo `backend/` (Laravel 12, SQLite dev) + `frontend/` (Vue 3/Vite/Pinia/Router/i18n); avvio documentato nel README; scelte: SPA Vue (Nuxt rimandato), SQLite in dev → MySQL in prod.
+> - ✅ **STEP 1** — migrazioni complete + ETL da `data/catalog-export.json` (estratto dal dump SQL): 14 località, 2 tipi, 24 feature, 31 condizioni, 5 extra, 19 veicoli, listini. Conteggi e spot-check coerenti col sito.
+> - ✅ **STEP 2** — `PriceResolver` + `ExtraPriceCalculator` con test (stagionali, tie-break days_from, forfait, condizioni per località, giorno-in-meno 09:00 vs 10:00, extra €25→€5/€0 per località).
+> - ✅ **STEP 3** — `AvailabilityEngine` con test (giorni interni saturi, blocchi, rinoleggio stesso giorno dalle 10:30, conflitti hub, finestre località, preavviso 30', no-same-day, lock transazionale in `BookingService`). Manca solo il confronto live sul sito (5 combinazioni) e il test di concorrenza su MySQL.
+> - ✅ **STEP 4 (parziale)** — API REST + SPA: home/ricerca, catalogo, popup prenotazione con fasce live, carrello; flusso verificato end-to-end (34 test verdi, build 74 KB gzip). Mancano: confronto 5 preventivi live, Lighthouse, hreflang/sitemap.
+> - ⬜ STEP 5 (pagamenti), 6 (admin), 7 (affiliati), 8 (cutover).
 
 ---
 
