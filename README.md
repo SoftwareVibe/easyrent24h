@@ -46,6 +46,11 @@ php artisan test
 
 Stripe (Payment Intents + webhook) e PayPal (Orders v2) si attivano con le chiavi in `backend/.env` (vedi `.env.example`); senza chiavi resta il driver `offline` per test/paga-al-ritiro. Acconto 25% configurabile da settings.
 
+## Troubleshooting
+
+- **Errore `The "intl" PHP extension is required`** sulle pagine admin: il dev server PHP non ricarica il `php.ini` — se l'estensione è stata abilitata dopo l'avvio, il processo va riavviato. Attenzione ai processi orfani che tengono la porta: `Get-Process php | Stop-Process -Force` e poi `php artisan serve`. Le estensioni richieste (`intl`, `zip`) sono dichiarate in `composer.json`: `composer install` fallisce subito se mancano.
+- Il box **Listino** nell'edit veicolo è caricato in lazy: appare scorrendo la pagina.
+
 ## Deploy
 
 `deploy/cutover-checklist.md` (procedura go-live con rollback) e `deploy/nginx-redirects.conf` (redirect 301 da WordPress).
