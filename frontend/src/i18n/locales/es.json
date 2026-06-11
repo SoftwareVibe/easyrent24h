@@ -1,0 +1,38 @@
+{
+  "nav": { "home": "Inicio", "fleet": "Nuestra flota", "cart": "Carrito" },
+  "search": {
+    "pickup": "Lugar de recogida",
+    "type": "Tipo de vehículo",
+    "dates": "Fechas de alquiler",
+    "submit": "Buscar"
+  },
+  "catalog": {
+    "title": "Nuestra flota",
+    "results": "Resultados de la búsqueda: {count} disponibles para alquilar en las fechas seleccionadas",
+    "from": "Alquila desde",
+    "perDay": "/ día",
+    "book": "Reservar",
+    "priceOnRequest": "Precio a consultar",
+    "empty": "No se encontraron vehículos."
+  },
+  "booking": {
+    "pickup": "Recogida",
+    "dropoff": "Devolución",
+    "start": "Fecha de inicio",
+    "end": "Fecha de fin",
+    "startTime": "Hora de recogida",
+    "endTime": "Hora de devolución",
+    "quantity": "Cantidad",
+    "extras": "Opciones extra",
+    "days": "{n} día | {n} días",
+    "total": "Total",
+    "addToCart": "Reservar",
+    "unavailable": "Fechas no disponibles"
+  },
+  "cart": {
+    "title": "Tu reserva",
+    "empty": "Tu carrito está vacío",
+    "checkout": "Ir al pago",
+    "remove": "Eliminar"
+  }
+}

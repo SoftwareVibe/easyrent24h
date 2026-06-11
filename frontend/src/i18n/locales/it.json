@@ -1,0 +1,38 @@
+{
+  "nav": { "home": "Home", "fleet": "La nostra flotta", "cart": "Carrello" },
+  "search": {
+    "pickup": "Luogo di ritiro",
+    "type": "Tipo di veicolo",
+    "dates": "Date del noleggio",
+    "submit": "Cerca"
+  },
+  "catalog": {
+    "title": "La nostra flotta",
+    "results": "Risultati della ricerca: {count} disponibili per il noleggio nelle date selezionate",
+    "from": "Noleggia da",
+    "perDay": "/ giorno",
+    "book": "Prenota ora",
+    "priceOnRequest": "Prezzo su richiesta",
+    "empty": "Nessun veicolo trovato."
+  },
+  "booking": {
+    "pickup": "Ritiro",
+    "dropoff": "Riconsegna",
+    "start": "Data inizio",
+    "end": "Data fine",
+    "startTime": "Orario di ritiro",
+    "endTime": "Orario di riconsegna",
+    "quantity": "Quantità",
+    "extras": "Opzioni extra",
+    "days": "{n} giorno | {n} giorni",
+    "total": "Totale",
+    "addToCart": "Prenota",
+    "unavailable": "Date non disponibili"
+  },
+  "cart": {
+    "title": "La tua prenotazione",
+    "empty": "Il carrello è vuoto",
+    "checkout": "Vai al checkout",
+    "remove": "Rimuovi"
+  }
+}

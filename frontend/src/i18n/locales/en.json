@@ -1,0 +1,38 @@
+{
+  "nav": { "home": "Home", "fleet": "Our Fleet", "cart": "Cart" },
+  "search": {
+    "pickup": "Pick up location",
+    "type": "Vehicle type",
+    "dates": "Rental dates",
+    "submit": "Search"
+  },
+  "catalog": {
+    "title": "Our Fleet",
+    "results": "Your search results: {count} available for rent on your selected dates",
+    "from": "Rent from",
+    "perDay": "/ day",
+    "book": "Book now",
+    "priceOnRequest": "Price on request",
+    "empty": "Sorry, no items were found."
+  },
+  "booking": {
+    "pickup": "Pick up",
+    "dropoff": "Drop off",
+    "start": "Start date",
+    "end": "End date",
+    "startTime": "Pick up time",
+    "endTime": "Drop off time",
+    "quantity": "Quantity",
+    "extras": "Extra options",
+    "days": "{n} day | {n} days",
+    "total": "Total",
+    "addToCart": "Book",
+    "unavailable": "Dates are unavailable"
+  },
+  "cart": {
+    "title": "Your booking",
+    "empty": "Your cart is empty",
+    "checkout": "Proceed to checkout",
+    "remove": "Remove"
+  }
+}
