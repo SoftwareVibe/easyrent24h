@@ -18,8 +18,10 @@ use Illuminate\Validation\ValidationException;
  */
 class BookingService
 {
-    public function __construct(private QuoteService $quoteService)
-    {
+    public function __construct(
+        private QuoteService $quoteService,
+        private CouponService $couponService,
+    ) {
     }
 
     /**
@@ -63,6 +65,18 @@ class BookingService
                 throw ValidationException::withMessages(['dates' => $quote['message'] ?? __('Dates are unavailable')]);
             }
 
+            // Coupon (con eccezioni coupon-hub, ex bartoloparcheggio/Agerola)
+            $couponCode = $customer['coupon_code'] ?? null;
+            $discount = 0.0;
+            if ($couponCode) {
+                $coupon = $this->couponService->validate($couponCode, $pickup);
+                if (! $coupon['valid']) {
+                    throw ValidationException::withMessages(['coupon_code' => $coupon['message'] ?? __('Coupon not valid')]);
+                }
+                $discount = round($quote['total'] * $coupon['percent'] / 100, 2);
+            }
+
+            $total = round($quote['total'] - $discount, 2);
             $depositPercent = (float) Setting::get('deposit_percent', 0);
 
             $order = Order::create([
@@ -74,9 +88,10 @@ class BookingService
                 'locale' => $locale,
                 'subtotal' => $quote['price'],
                 'extras_total' => $quote['extras_total'],
-                'total' => $quote['total'],
-                'deposit_amount' => $depositPercent ? round($quote['total'] * $depositPercent / 100, 2) : null,
-                'coupon_code' => $customer['coupon_code'] ?? null,
+                'discount_total' => $discount,
+                'total' => $total,
+                'deposit_amount' => $depositPercent ? round($total * $depositPercent / 100, 2) : null,
+                'coupon_code' => $couponCode,
             ]);
 
             $order->bookings()->create([

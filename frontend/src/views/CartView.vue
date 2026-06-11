@@ -22,7 +22,12 @@ const cart = useCartStore()
             <span v-if="item.deposit_amount"> (deposit €{{ item.deposit_amount }})</span>
           </p>
         </div>
-        <button class="btn btn--outline" @click="cart.remove(index)">{{ t('cart.remove') }}</button>
+        <div class="cart__actions">
+          <RouterLink class="btn" :to="{ name: 'checkout', params: { number: item.order_number } }">
+            {{ t('cart.checkout') }}
+          </RouterLink>
+          <button class="btn btn--outline" @click="cart.remove(index)">{{ t('cart.remove') }}</button>
+        </div>
       </div>
     </div>
   </section>
@@ -44,5 +49,10 @@ const cart = useCartStore()
 .cart__item p {
   margin: 0.2rem 0;
   color: var(--color-muted);
+}
+
+.cart__actions {
+  display: flex;
+  gap: 0.6rem;
 }
 </style>

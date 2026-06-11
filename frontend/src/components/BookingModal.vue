@@ -1,10 +1,12 @@
 <script setup>
 import { computed, reactive, ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import api from '../api/client'
 import { useCartStore } from '../stores/cart'
 
 const { t, locale } = useI18n()
+const router = useRouter()
 const cart = useCartStore()
 
 const props = defineProps({
@@ -25,12 +27,11 @@ const form = reactive({
   extras: {},
 })
 
-const customer = reactive({ name: '', email: '', phone: '' })
+const customer = reactive({ name: '', email: '', phone: '', coupon_code: '' })
 
 const quote = ref(null)
 const quoting = ref(false)
 const submitting = ref(false)
-const confirmation = ref(null)
 const errorMessage = ref(null)
 
 const canQuote = computed(() => form.start && form.end && form.pick_up)
@@ -100,13 +101,13 @@ async function submit() {
       customer: { ...customer },
       locale: locale.value,
     })
-    confirmation.value = order
     cart.add({
       ...order,
       vehicle: props.vehicle.name,
       start: form.start,
       end: form.end,
     })
+    router.push({ name: 'checkout', params: { number: order.order_number } })
   } catch (e) {
     errorMessage.value = e.data?.message || e.message
   } finally {
@@ -120,17 +121,7 @@ async function submit() {
     <div class="modal card">
       <button class="modal__close" @click="emit('close')">×</button>
 
-      <template v-if="confirmation">
-        <h2>✓ {{ confirmation.order_number }}</h2>
-        <p>{{ vehicle.name }} — {{ form.start }} → {{ form.end }}</p>
-        <p>
-          <strong>{{ t('booking.total') }}: €{{ confirmation.total }}</strong>
-          <span v-if="confirmation.deposit_amount"> (deposit €{{ confirmation.deposit_amount }})</span>
-        </p>
-        <button class="btn" @click="emit('close')">OK</button>
-      </template>
-
-      <template v-else>
+      <template v-if="vehicle">
         <h2>{{ vehicle.name }}</h2>
 
         <div class="grid">
@@ -217,6 +208,10 @@ async function submit() {
           <div class="field">
             <label>Phone</label>
             <input v-model="customer.phone" type="tel" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label>{{ t('booking.coupon') }}</label>
+            <input v-model="customer.coupon_code" type="text" autocomplete="off" />
           </div>
         </div>
 

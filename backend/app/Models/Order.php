@@ -15,6 +15,11 @@ class Order extends Model
         return $this->hasMany(Booking::class);
     }
 
+    public function payments(): HasMany
+    {
+        return $this->hasMany(Payment::class);
+    }
+
     public static function generateNumber(): string
     {
         return 'ER-'.now()->format('Ymd').'-'.Str::upper(Str::random(5));

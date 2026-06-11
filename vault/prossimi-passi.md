@@ -34,11 +34,16 @@ Modello dati + seeder ETL da `data/catalog-export.json` (14 località, 31 condiz
 - Immagini veicoli recuperate dall'FTP, ottimizzate (webp 640px, 6,6 MB → ~0,5 MB) e in card.
 - Residuo rimandato allo Step 8: hreflang/URL localizzati (richiede SSR/prerender).
 
-### 4. Step 5 — Checkout e pagamenti ⬅️ PROSSIMO PUNTO
-Checkout custom: dati cliente, acconto 25–30% (ex AWCDP), Stripe + PayPal sandbox, email di conferma nelle 3 lingue, stati ordine che liberano/occupano il calendario, coupon (incl. eccezioni coupon-hub da configurazione).
+### 4. ~~Step 5 — Checkout e pagamenti~~ ✅ IMPLEMENTATO (11/06/2026)
+- Acconto 25% configurabile (ex AWCDP); flusso `pending → deposit_paid → paid`; annullo/rimborso libera le date (testato).
+- Driver: **Stripe** (Payment Intents + webhook `payment_intent.succeeded`), **PayPal** (Orders v2, create→approve→capture), **offline** (test/paga al ritiro).
+- Coupon con sconto % e **eccezioni coupon-hub** (bartoloparcheggio bloccato su hub Agerola — testato); endpoint `POST /api/coupons/validate`.
+- Email conferma EN/IT/ES (markdown mailable, testate tutte e tre + e2e nel log).
+- SPA: pagina `/checkout/:numero` con scelta acconto/totale, Stripe Payment Element, redirect PayPal, riepilogo ordine; campo coupon nel popup.
+- **Residuo per chiudere il Gate 5**: inserire le chiavi sandbox in `backend/.env` (`STRIPE_SECRET`, `STRIPE_KEY`, `PAYPAL_CLIENT_ID`, `PAYPAL_SECRET`) e fare un giro di prova con carta test `4242…` e conto sandbox PayPal. ⚠️ Servono le chiavi di Davide.
 
-### 5. Step 6–8 del piano
-Admin (Filament: calendario, blocchi, listini), modulo affiliati (riscrittura sicura di `backend_rapp` con QR coupon), contenuti/SEO/redirect 301/cutover.
+### 5. Step 6–8 del piano ⬅️ PROSSIMO PUNTO
+Admin (Filament: calendario prenotazioni, blocchi manuali, listini/condizioni, settings), modulo affiliati (riscrittura sicura di `backend_rapp` con QR coupon), contenuti/SEO/redirect 301/cutover.
 
 ---
 

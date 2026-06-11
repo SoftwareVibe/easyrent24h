@@ -27,7 +27,31 @@
     "days": "{n} day | {n} days",
     "total": "Total",
     "addToCart": "Book",
+    "coupon": "Coupon code",
     "unavailable": "Dates are unavailable"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "payTitle": "Payment",
+    "deposit": "Pay deposit now",
+    "fullAmount": "Pay full amount",
+    "discount": "Discount",
+    "paid": "Paid",
+    "remaining": "Remaining",
+    "confirmPayment": "Confirm payment",
+    "completed": "Order fully paid. See you on the Amalfi Coast!",
+    "status": {
+      "pending": "Awaiting payment",
+      "deposit_paid": "Deposit paid — booking confirmed",
+      "paid": "Paid",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded"
+    },
+    "providers": {
+      "stripe": "Pay by card (Stripe)",
+      "paypal": "Pay with PayPal",
+      "offline": "Pay at pick up / test"
+    }
   },
   "cart": {
     "title": "Your booking",

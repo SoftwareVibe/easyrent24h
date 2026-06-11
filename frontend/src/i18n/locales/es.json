@@ -27,7 +27,31 @@
     "days": "{n} día | {n} días",
     "total": "Total",
     "addToCart": "Reservar",
+    "coupon": "Código de cupón",
     "unavailable": "Fechas no disponibles"
+  },
+  "checkout": {
+    "title": "Pago",
+    "payTitle": "Pago",
+    "deposit": "Pagar el depósito ahora",
+    "fullAmount": "Pagar el importe total",
+    "discount": "Descuento",
+    "paid": "Pagado",
+    "remaining": "Pendiente",
+    "confirmPayment": "Confirmar pago",
+    "completed": "Pedido pagado. ¡Nos vemos en la Costa Amalfitana!",
+    "status": {
+      "pending": "Pendiente de pago",
+      "deposit_paid": "Depósito pagado — reserva confirmada",
+      "paid": "Pagado",
+      "cancelled": "Cancelado",
+      "refunded": "Reembolsado"
+    },
+    "providers": {
+      "stripe": "Pagar con tarjeta (Stripe)",
+      "paypal": "Pagar con PayPal",
+      "offline": "Pagar en la recogida / prueba"
+    }
   },
   "cart": {
     "title": "Tu reserva",

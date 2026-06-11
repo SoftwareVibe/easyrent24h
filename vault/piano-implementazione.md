@@ -11,7 +11,8 @@
 > - ✅ **STEP 2** — `PriceResolver` + `ExtraPriceCalculator` con test (stagionali, tie-break days_from, forfait, condizioni per località, giorno-in-meno 09:00 vs 10:00, extra €25→€5/€0 per località).
 > - ✅ **STEP 3 — GATE CHIUSO** — `AvailabilityEngine` con test + **confronto live 5/5 identico** (totali e liste fasce) + **test concorrenza su MySQL** (2 richieste simultanee → 201/422, lock funziona). Dettagli: `gate-3-4-report.md`.
 > - ✅ **STEP 4 — GATE CHIUSO** — API REST + SPA completa con immagini reali ottimizzate; **Lighthouse: performance 99, SEO 100, best-practices 100, a11y 95**; robots+sitemap+meta OG. Residuo non bloccante: hreflang/URL localizzati rimandati allo Step 8 (SSR/prerender). Dettagli: `gate-3-4-report.md`.
-> - ⬜ STEP 5 (pagamenti), 6 (admin), 7 (affiliati), 8 (cutover).
+> - ✅ **STEP 5 (implementato, gate quasi chiuso)** — checkout custom con acconto 25% (ex AWCDP), driver Stripe (Payment Intents + webhook), PayPal (Orders v2 REST) e offline; coupon con eccezioni coupon-hub; stati ordine `pending → deposit_paid → paid` / `cancelled|refunded` che occupano/liberano il calendario; email di conferma in EN/IT/ES; pagina checkout in SPA. 43 test verdi + e2e offline con coupon reale. **Residuo gate**: verifica con chiavi sandbox Stripe/PayPal reali (servono le chiavi di Davide in `.env`).
+> - ⬜ STEP 6 (admin), 7 (affiliati), 8 (cutover).
 
 ---
 

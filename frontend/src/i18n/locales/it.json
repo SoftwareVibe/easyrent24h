@@ -27,7 +27,31 @@
     "days": "{n} giorno | {n} giorni",
     "total": "Totale",
     "addToCart": "Prenota",
+    "coupon": "Codice coupon",
     "unavailable": "Date non disponibili"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "payTitle": "Pagamento",
+    "deposit": "Paga ora l'acconto",
+    "fullAmount": "Paga l'intero importo",
+    "discount": "Sconto",
+    "paid": "Pagato",
+    "remaining": "Residuo",
+    "confirmPayment": "Conferma pagamento",
+    "completed": "Ordine saldato. Ci vediamo in Costiera!",
+    "status": {
+      "pending": "In attesa di pagamento",
+      "deposit_paid": "Acconto pagato — prenotazione confermata",
+      "paid": "Pagato",
+      "cancelled": "Annullato",
+      "refunded": "Rimborsato"
+    },
+    "providers": {
+      "stripe": "Paga con carta (Stripe)",
+      "paypal": "Paga con PayPal",
+      "offline": "Paga al ritiro / test"
+    }
   },
   "cart": {
     "title": "La tua prenotazione",
