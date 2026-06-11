@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "7be74ff5beb872d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "6bc84a0ef5863df3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06b469612fcff673",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "piano-implementazione.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "piano-implementazione"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0c872a3a121685e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f486a900a2ee637",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f856504865beb299",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "56fba376900c1735",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "25f4e41042c0a9ec",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0c559e0a5657e666",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee8f2ce54f1a3f46",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5419a1dc9270fe3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "piano-implementazione.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a piano-implementazione"
+            }
+          },
+          {
+            "id": "7b32d37f8bc49adf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "piano-implementazione.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da piano-implementazione"
+            }
+          },
+          {
+            "id": "ae77df98f15ef587",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "4b1eb2f3841772ab",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tutte le proprietà"
+            }
+          },
+          {
+            "id": "e93c6ba68f744fea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "piano-implementazione.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di piano-implementazione"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "bases:Crea nuova Base": false
+    }
+  },
+  "active": "06b469612fcff673",
+  "lastOpenFiles": [
+    "piano-implementazione.md.tmp.17252.73a420e64bf1",
+    "piano-implementazione.md.tmp.17252.addc0defc226",
+    "piano-implementazione.md.tmp.17252.83dfb3e28370",
+    "piano-implementazione.md.tmp.17252.d042c56badaf",
+    "piano-implementazione.md.tmp.17252.c454ddf52c66",
+    "piano-implementazione.md.tmp.17252.7c4c1f9fdbfa",
+    "piano-implementazione.md.tmp.17252.f717a6d1576a"
+  ]
+}

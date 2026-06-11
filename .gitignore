@@ -1,0 +1,7 @@
+# Tooling locale (sessioni Claude Code / Playwright MCP)
+.claude/
+.playwright-mcp/
+
+# OS
+Thumbs.db
+.DS_Store
