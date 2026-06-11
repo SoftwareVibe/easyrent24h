@@ -8,3 +8,6 @@ Route::get('/', function () {
 });
 
 Route::get('/qr/coupon/{code}.svg', [QrCodeController::class, 'coupon'])->name('qr.coupon');
+
+Route::get('/locale/{locale}', [\App\Http\Controllers\LocaleController::class, 'switch'])
+    ->name('locale.switch');

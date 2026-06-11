@@ -42,6 +42,7 @@ class VendorPanelProvider extends PanelProvider
                 \App\Filament\Vendor\Widgets\VendorStats::class,
                 \App\Filament\Vendor\Widgets\VendorOrdersTable::class,
             ])
+            ->userMenuItems(\App\Filament\Support\LocaleMenu::items())
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
@@ -52,6 +53,7 @@ class VendorPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+                \App\Http\Middleware\SetPanelLocale::class,
             ])
             ->authMiddleware([
                 Authenticate::class,
