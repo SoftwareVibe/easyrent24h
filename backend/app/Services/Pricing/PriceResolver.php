@@ -25,7 +25,7 @@ class PriceResolver
         ?int $pickupLocationId = null,
         ?int $dropoffLocationId = null,
     ): array {
-        $days = $start->diffInDays($end) + 1; // booking_type "day": estremi inclusi
+        $days = (int) $start->diffInDays($end) + 1; // booking_type "day": estremi inclusi
 
         $priceRows = $vehicle->prices()->get()->keyBy(
             fn ($row) => $row->price_condition_id ?? 0

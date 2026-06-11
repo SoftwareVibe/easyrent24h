@@ -28,7 +28,7 @@ class ExtraPriceCalculator
             return 0.0;
         }
         $qty = min($qty, max(1, (int) $extra->max_qty));
-        $days = $start->diffInDays($end) + 1;
+        $days = (int) $start->diffInDays($end) + 1;
 
         $overrides = $extra->conditionalPrices()->get()->keyBy('price_condition_id');
 
