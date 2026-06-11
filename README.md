@@ -30,12 +30,25 @@ npm install
 npm run dev                        # http://localhost:5173 (API su localhost:8000)
 ```
 
-Test backend (34 test sui "casi d'oro" del motore):
+Test backend (49 test: motore, pagamenti, coupon, email, pannelli):
 
 ```bash
 cd backend
 php artisan test
 ```
+
+## Pannelli
+
+- **Admin**: `http://localhost:8000/admin` — gestione veicoli/listini, località (finestre orarie), prenotazioni e blocchi manuali, ordini (annulla/rimborsa), coupon, vendor, settings. Utente iniziale creato con `php artisan make:filament-user`.
+- **Rappresentanti**: `http://localhost:8000/vendor` — ogni vendor vede i propri ordini e commissioni; QR del coupon in `/qr/coupon/{codice}.svg`.
+
+## Pagamenti
+
+Stripe (Payment Intents + webhook) e PayPal (Orders v2) si attivano con le chiavi in `backend/.env` (vedi `.env.example`); senza chiavi resta il driver `offline` per test/paga-al-ritiro. Acconto 25% configurabile da settings.
+
+## Deploy
+
+`deploy/cutover-checklist.md` (procedura go-live con rollback) e `deploy/nginx-redirects.conf` (redirect 301 da WordPress).
 
 ## Logica di dominio replicata (vedi `vault/analisi-easyrent24h.md` §10)
 

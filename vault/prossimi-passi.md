@@ -42,8 +42,16 @@ Modello dati + seeder ETL da `data/catalog-export.json` (14 località, 31 condiz
 - SPA: pagina `/checkout/:numero` con scelta acconto/totale, Stripe Payment Element, redirect PayPal, riepilogo ordine; campo coupon nel popup.
 - **Residuo per chiudere il Gate 5**: inserire le chiavi sandbox in `backend/.env` (`STRIPE_SECRET`, `STRIPE_KEY`, `PAYPAL_CLIENT_ID`, `PAYPAL_SECRET`) e fare un giro di prova con carta test `4242…` e conto sandbox PayPal. ⚠️ Servono le chiavi di Davide.
 
-### 5. Step 6–8 del piano ⬅️ PROSSIMO PUNTO
-Admin (Filament: calendario prenotazioni, blocchi manuali, listini/condizioni, settings), modulo affiliati (riscrittura sicura di `backend_rapp` con QR coupon), contenuti/SEO/redirect 301/cutover.
+### 5. ~~Step 6–8~~ ✅ IMPLEMENTATI (11/06/2026)
+- **Admin** `/admin` (Filament v5, utente `davidesaiano1@gmail.com` / `EasyRent24h!` — **cambiare password**): veicoli+listino, località con finestre orarie, blocchi manuali, ordini con annulla/rimborsa, coupon, settings.
+- **Affiliati** `/vendor`: pannello rappresentanti con ordini/commissioni propri, QR coupon (`/qr/coupon/CODICE.svg`), 65 coupon reali importati.
+- **Cutover preparato**: `deploy/nginx-redirects.conf` + `deploy/cutover-checklist.md`, pagine statiche, WhatsApp, hreflang.
+
+### 6. Cose che servono da Davide per chiudere tutto ⬅️ PROSSIMO PUNTO
+1. **Chiavi sandbox/live Stripe e PayPal** in `backend/.env` → test Gate 5 e produzione.
+2. **Server di produzione** (PHP 8.2 + MySQL + nginx) → eseguire la checklist di cutover (Gate 8).
+3. Anagrafiche reali dei **vendor** (nome, email, coupon, %) → creare gli account `/vendor`.
+4. Cambiare la password admin e decidere l'indirizzo email mittente (SMTP).
 
 ---
 
