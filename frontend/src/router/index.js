@@ -21,6 +21,16 @@ const routes = [
     name: 'checkout',
     component: () => import('../views/CheckoutView.vue'),
   },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/AboutView.vue'),
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/ContactView.vue'),
+  },
 ]
 
 export default createRouter({

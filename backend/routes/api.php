@@ -23,3 +23,5 @@ Route::post('/orders/{number}/confirm', [PaymentController::class, 'confirm']);
 Route::post('/orders/{number}/cancel', [PaymentController::class, 'cancel']);
 
 Route::post('/webhooks/stripe', StripeWebhookController::class);
+
+Route::post('/contact', [\App\Http\Controllers\Api\ContactController::class, 'store']);

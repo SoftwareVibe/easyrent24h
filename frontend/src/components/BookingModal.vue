@@ -27,7 +27,12 @@ const form = reactive({
   extras: {},
 })
 
-const customer = reactive({ name: '', email: '', phone: '', coupon_code: '' })
+const customer = reactive({
+  name: '',
+  email: '',
+  phone: '',
+  coupon_code: sessionStorage.getItem('coupon') || '',
+})
 
 const quote = ref(null)
 const quoting = ref(false)

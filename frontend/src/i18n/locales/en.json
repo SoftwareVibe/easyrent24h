@@ -1,5 +1,21 @@
 {
-  "nav": { "home": "Home", "fleet": "Our Fleet", "cart": "Cart" },
+  "nav": { "home": "Home", "fleet": "Our Fleet", "about": "About us", "contact": "Contact", "cart": "Cart" },
+  "about": {
+    "title": "About us",
+    "p1": "easyRent24h rents scooters, Vespas and cars on the Amalfi Coast, with pick up and drop off in Positano, Amalfi, Sorrento, Agerola and many more locations.",
+    "p2": "Why choose us:",
+    "li1": "Home delivery and pick up available in most locations",
+    "li2": "Transparent pricing: pay a small deposit online, the rest at pick up",
+    "li3": "Flexible time slots every 30 minutes, from 8:00 to 20:00"
+  },
+  "contact": {
+    "title": "Contact us",
+    "name": "Name",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send",
+    "sent": "Message sent. We will reply as soon as possible!"
+  },
   "search": {
     "pickup": "Pick up location",
     "type": "Vehicle type",

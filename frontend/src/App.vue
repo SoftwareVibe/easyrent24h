@@ -1,14 +1,27 @@
 <script setup>
+import { onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useCartStore } from './stores/cart'
+import WhatsAppButton from './components/WhatsAppButton.vue'
 
 const { t, locale } = useI18n()
 const cart = useCartStore()
+const route = useRoute()
 
 function setLocale(value) {
   locale.value = value
   localStorage.setItem('locale', value)
 }
+
+onMounted(() => {
+  // lingua via URL (?lang=it) per gli hreflang
+  const lang = new URLSearchParams(window.location.search).get('lang')
+  if (['en', 'it', 'es'].includes(lang)) setLocale(lang)
+  // coupon via URL (ex WooCommerce URL Coupons: link affiliato con QR)
+  const coupon = new URLSearchParams(window.location.search).get('coupon')
+  if (coupon) sessionStorage.setItem('coupon', coupon)
+})
 </script>
 
 <template>
@@ -18,6 +31,8 @@ function setLocale(value) {
       <nav class="header__nav">
         <RouterLink to="/">{{ t('nav.home') }}</RouterLink>
         <RouterLink to="/catalog">{{ t('nav.fleet') }}</RouterLink>
+        <RouterLink to="/about">{{ t('nav.about') }}</RouterLink>
+        <RouterLink to="/contact">{{ t('nav.contact') }}</RouterLink>
         <RouterLink to="/cart">{{ t('nav.cart') }} ({{ cart.items.length }})</RouterLink>
       </nav>
       <div class="header__locales">
@@ -42,6 +57,8 @@ function setLocale(value) {
       <p>easyRent24h — Scooter &amp; Car Rental, Amalfi Coast</p>
     </div>
   </footer>
+
+  <WhatsAppButton />
 </template>
 
 <style scoped>

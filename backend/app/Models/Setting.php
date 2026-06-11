@@ -15,6 +15,12 @@ class Setting extends Model
 
     protected $casts = ['value' => 'array'];
 
+    protected static function booted(): void
+    {
+        static::saved(fn () => Cache::forget('settings.all'));
+        static::deleted(fn () => Cache::forget('settings.all'));
+    }
+
     public static function get(string $key, mixed $default = null): mixed
     {
         $all = Cache::remember('settings.all', 60, fn () => static::query()

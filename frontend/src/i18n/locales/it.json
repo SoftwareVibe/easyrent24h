@@ -1,5 +1,21 @@
 {
-  "nav": { "home": "Home", "fleet": "La nostra flotta", "cart": "Carrello" },
+  "nav": { "home": "Home", "fleet": "La nostra flotta", "about": "Chi siamo", "contact": "Contatti", "cart": "Carrello" },
+  "about": {
+    "title": "Chi siamo",
+    "p1": "easyRent24h noleggia scooter, Vespe e auto in Costiera Amalfitana, con ritiro e riconsegna a Positano, Amalfi, Sorrento, Agerola e molte altre località.",
+    "p2": "Perché sceglierci:",
+    "li1": "Consegna e ritiro a domicilio nella maggior parte delle località",
+    "li2": "Prezzi trasparenti: piccolo acconto online, il resto al ritiro",
+    "li3": "Fasce orarie flessibili ogni 30 minuti, dalle 8:00 alle 20:00"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "name": "Nome",
+    "phone": "Telefono",
+    "message": "Messaggio",
+    "send": "Invia",
+    "sent": "Messaggio inviato. Ti risponderemo al più presto!"
+  },
   "search": {
     "pickup": "Luogo di ritiro",
     "type": "Tipo di veicolo",

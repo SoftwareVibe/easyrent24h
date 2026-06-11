@@ -1,0 +1,729 @@
+{
+  "vendors": [
+    {
+      "id": 1,
+      "username": "Federico Sibilio",
+      "stato": "Attivo",
+      "coupon": "test"
+    }
+  ],
+  "payments": [
+    {
+      "id": 4,
+      "idVendor": 1,
+      "amount": 1.3,
+      "created": "2019-08-04"
+    },
+    {
+      "id": 5,
+      "idVendor": 1,
+      "amount": 0,
+      "created": "2019-08-04"
+    },
+    {
+      "id": 6,
+      "idVendor": 14,
+      "amount": 1,
+      "created": "2024-03-04"
+    }
+  ],
+  "azionistato": [
+    {
+      "id": 1,
+      "statoIn": "Attivo",
+      "statoOut": "Sospeso",
+      "codificaIn": "0",
+      "codificaOut": -1
+    },
+    {
+      "id": 4,
+      "statoIn": "Sospeso",
+      "statoOut": "Attivo",
+      "codificaIn": "-1",
+      "codificaOut": 0
+    },
+    {
+      "id": 5,
+      "statoIn": "Da Attivare",
+      "statoOut": "Attivo",
+      "codificaIn": "2",
+      "codificaOut": 0
+    }
+  ],
+  "menus_schema": "CREATE TABLE `menus` (\n  `id` bigint NOT NULL,\n  `name` varchar(255) NOT NULL,\n  `link` varchar(255) NOT NULL,\n  `order` int NOT NULL,\n  `group` int NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;\n-- esempio righe:\n[{\"id\":1,\"name\":\"Home\",\"link\":\"#\",\"order\":1,\"group\":2},{\"id\":4,\"name\":\"Rappresentanti\",\"link\":\"#utenti\",\"order\":2,\"group\":2},{\"id\":11,\"name\":\"Esci\",\"link\":\"logout.php\",\"order\":4,\"group\":1}]",
+  "vendite": [
+    {
+      "iduser": 1,
+      "total": 3.2
+    }
+  ],
+  "legacy_users": [
+    {
+      "id": 4,
+      "username": "admin",
+      "type": "admin",
+      "created": "2019-07-30 18:35:39",
+      "password": "***"
+    }
+  ],
+  "shop_coupons": [
+    {
+      "id": 640,
+      "code": "coupon",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "coupon",
+      "post_date": "2019-04-10 15:06:06",
+      "description": "Discount discount discount discount discount !!!!"
+    },
+    {
+      "id": 3779,
+      "code": "bartoloparcheggio",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "bartoloparcheggio",
+      "post_date": "2024-04-08 20:20:47",
+      "description": ""
+    },
+    {
+      "id": 4082,
+      "code": "ildolcetramonto",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "ildolcetramonto",
+      "post_date": "2024-04-17 19:12:14",
+      "description": "COUPON"
+    },
+    {
+      "id": 4085,
+      "code": "fuscocamilla1962",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "fuscocamilla1962",
+      "post_date": "2024-04-17 21:26:51",
+      "description": "COUPON"
+    },
+    {
+      "id": 4234,
+      "code": "easyRentCoupon01",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon01",
+      "post_date": "2024-04-19 11:22:19",
+      "description": "COUPON"
+    },
+    {
+      "id": 4236,
+      "code": "easyRentCoupon02",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon02",
+      "post_date": "2024-04-19 11:42:41",
+      "description": "COUPON"
+    },
+    {
+      "id": 4568,
+      "code": "easyRentCoupon03",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon029",
+      "post_date": "2024-04-29 22:07:36",
+      "description": "COUPON"
+    },
+    {
+      "id": 4569,
+      "code": "easyRentCoupon04",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon04",
+      "post_date": "2024-04-30 04:17:52",
+      "description": "COUPON"
+    },
+    {
+      "id": 4570,
+      "code": "easyRentCoupon05",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon05",
+      "post_date": "2024-04-30 04:26:25",
+      "description": "COUPON"
+    },
+    {
+      "id": 4571,
+      "code": "easyRentCoupon06",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon06",
+      "post_date": "2024-04-30 04:40:08",
+      "description": "COUPON"
+    },
+    {
+      "id": 4572,
+      "code": "easyRentCoupon07",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon07",
+      "post_date": "2024-04-30 04:55:11",
+      "description": "COUPON"
+    },
+    {
+      "id": 4573,
+      "code": "easyRentCoupon08",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon08",
+      "post_date": "2024-04-30 05:01:43",
+      "description": "COUPON"
+    },
+    {
+      "id": 4578,
+      "code": "easyRentCoupon09",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon09",
+      "post_date": "2024-04-30 15:23:15",
+      "description": "COUPON"
+    },
+    {
+      "id": 4608,
+      "code": "easyRentCoupon10",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon10",
+      "post_date": "2024-05-04 19:25:23",
+      "description": "COUPON"
+    },
+    {
+      "id": 4609,
+      "code": "easyRentCoupon11",
+      "status": "publish",
+      "amount": "10",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon11",
+      "post_date": "2024-05-04 19:51:39",
+      "description": "COUPON"
+    },
+    {
+      "id": 4610,
+      "code": "easyRentCoupon12",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon12",
+      "post_date": "2024-05-04 20:03:51",
+      "description": "COUPON"
+    },
+    {
+      "id": 4612,
+      "code": "easyRentCoupon13",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon13",
+      "post_date": "2024-05-05 07:36:57",
+      "description": "COUPON"
+    },
+    {
+      "id": 4743,
+      "code": "CodeEasyRent",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "codeeasyrent",
+      "post_date": "2024-05-11 21:34:54",
+      "description": ""
+    },
+    {
+      "id": 4907,
+      "code": "easyRentCoupon14",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon14",
+      "post_date": "2024-05-16 18:26:36",
+      "description": "COUPON"
+    },
+    {
+      "id": 4908,
+      "code": "easyRentCoupon15",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon15",
+      "post_date": "2024-05-16 18:58:58",
+      "description": "COUPON"
+    },
+    {
+      "id": 4909,
+      "code": "easyRentCoupon16",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon16",
+      "post_date": "2024-05-16 19:09:26",
+      "description": "COUPON"
+    },
+    {
+      "id": 4916,
+      "code": "easyRentCoupon17",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon17",
+      "post_date": "2024-05-17 11:35:50",
+      "description": "COUPON"
+    },
+    {
+      "id": 5061,
+      "code": "easyRentCoupon18",
+      "status": "publish",
+      "amount": "10",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon18",
+      "post_date": "2024-05-18 09:08:35",
+      "description": "COUPON"
+    },
+    {
+      "id": 5071,
+      "code": "easyRentCoupon19",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon19",
+      "post_date": "2024-05-19 19:42:48",
+      "description": "COUPON"
+    },
+    {
+      "id": 5237,
+      "code": "easyRentCoupon20",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon20",
+      "post_date": "2024-05-24 04:16:39",
+      "description": "COUPON"
+    },
+    {
+      "id": 5238,
+      "code": "easyRentCoupon21",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon21",
+      "post_date": "2024-05-24 04:30:29",
+      "description": "COUPON"
+    },
+    {
+      "id": 5240,
+      "code": "easyRentCoupon22",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon22",
+      "post_date": "2024-05-24 04:39:23",
+      "description": "COUPON"
+    },
+    {
+      "id": 5241,
+      "code": "easyRentCoupon23",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon23",
+      "post_date": "2024-05-24 04:46:55",
+      "description": "COUPON"
+    },
+    {
+      "id": 5242,
+      "code": "easyRentCoupon24",
+      "status": "publish",
+      "amount": "10",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon24",
+      "post_date": "2024-05-24 04:53:16",
+      "description": "COUPON"
+    },
+    {
+      "id": 5262,
+      "code": "easyRentCoupon25",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon25",
+      "post_date": "2024-05-24 15:04:56",
+      "description": "COUPON"
+    },
+    {
+      "id": 5266,
+      "code": "easyRentCoupon26",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon26",
+      "post_date": "2024-05-24 19:55:26",
+      "description": "COUPON"
+    },
+    {
+      "id": 5279,
+      "code": "easyRentCoupon27",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon27",
+      "post_date": "2024-05-26 07:51:47",
+      "description": "COUPON"
+    },
+    {
+      "id": 5283,
+      "code": "easyRentCoupon28",
+      "status": "publish",
+      "amount": "10",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon28",
+      "post_date": "2024-05-27 08:19:24",
+      "description": "COUPON"
+    },
+    {
+      "id": 5331,
+      "code": "easyRentCoupon29",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon29",
+      "post_date": "2024-06-03 13:07:12",
+      "description": "COUPON"
+    },
+    {
+      "id": 5372,
+      "code": "easyRentCoupon30",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon30",
+      "post_date": "2024-06-07 09:22:20",
+      "description": "COUPON"
+    },
+    {
+      "id": 5499,
+      "code": "easyRentCoupon31",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon31",
+      "post_date": "2024-06-16 08:35:31",
+      "description": "COUPON"
+    },
+    {
+      "id": 5676,
+      "code": "easyRentCoupon32",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon32",
+      "post_date": "2024-06-29 07:14:57",
+      "description": "COUPON"
+    },
+    {
+      "id": 5714,
+      "code": "easyRentCoupon33",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon33",
+      "post_date": "2024-07-02 09:27:55",
+      "description": "COUPON"
+    },
+    {
+      "id": 5766,
+      "code": "easyRentCoupon34",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon34",
+      "post_date": "2024-07-05 14:29:33",
+      "description": "COUPON"
+    },
+    {
+      "id": 5828,
+      "code": "easyRentCoupon35",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon35",
+      "post_date": "2024-07-09 14:34:13",
+      "description": "COUPON"
+    },
+    {
+      "id": 6566,
+      "code": "easyRentCoupon36",
+      "status": "publish",
+      "amount": "5",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon36",
+      "post_date": "2025-03-10 19:37:56",
+      "description": "COUPON"
+    },
+    {
+      "id": 6639,
+      "code": "easyRentCoupon37",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon37",
+      "post_date": "2025-03-28 15:29:00",
+      "description": "COUPON"
+    },
+    {
+      "id": 6640,
+      "code": "easyRentCoupon38",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon38",
+      "post_date": "2025-03-29 10:19:48",
+      "description": "COUPON"
+    },
+    {
+      "id": 6641,
+      "code": "easyRentCoupon39",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon39",
+      "post_date": "2025-03-29 11:00:23",
+      "description": "COUPON"
+    },
+    {
+      "id": 6772,
+      "code": "easyRentCoupon40",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon40",
+      "post_date": "2025-04-08 08:15:52",
+      "description": "COUPON"
+    },
+    {
+      "id": 6776,
+      "code": "easyRentCoupon41",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon41",
+      "post_date": "2025-04-08 08:52:14",
+      "description": "COUPON"
+    },
+    {
+      "id": 6777,
+      "code": "easyRentCoupon42",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon42",
+      "post_date": "2025-04-08 09:17:13",
+      "description": "COUPON"
+    },
+    {
+      "id": 6790,
+      "code": "easyRentCoupon43",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon43",
+      "post_date": "2025-04-08 12:56:30",
+      "description": "COUPON"
+    },
+    {
+      "id": 6856,
+      "code": "easyRentCoupon44",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon44",
+      "post_date": "2025-04-09 12:29:16",
+      "description": "COUPON"
+    },
+    {
+      "id": 6857,
+      "code": "easyRentCoupon45",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon45",
+      "post_date": "2025-04-09 13:19:05",
+      "description": "COUPON"
+    },
+    {
+      "id": 6858,
+      "code": "easyRentCoupon46",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon46",
+      "post_date": "2025-04-09 15:09:53",
+      "description": "COUPON"
+    },
+    {
+      "id": 6859,
+      "code": "easyRentCoupon47",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon47",
+      "post_date": "2025-04-09 15:25:05",
+      "description": "COUPON"
+    },
+    {
+      "id": 6860,
+      "code": "easyRentCoupon48",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon48",
+      "post_date": "2025-04-09 15:33:48",
+      "description": "COUPON"
+    },
+    {
+      "id": 8291,
+      "code": "easyRentCoupon49",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon49",
+      "post_date": "2025-05-03 05:54:05",
+      "description": "COUPON"
+    },
+    {
+      "id": 8292,
+      "code": "easyRentCoupon50",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon50",
+      "post_date": "2025-05-03 05:54:21",
+      "description": "COUPON"
+    },
+    {
+      "id": 8994,
+      "code": "easyrentcoupon51",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon51",
+      "post_date": "2025-05-19 19:30:18",
+      "description": "COUPON"
+    },
+    {
+      "id": 9564,
+      "code": "easyRentCoupon52",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon52",
+      "post_date": "2025-06-04 13:16:48",
+      "description": "COUPON"
+    },
+    {
+      "id": 9565,
+      "code": "easyRentCoupon53",
+      "status": "publish",
+      "amount": "10",
+      "discount_type": "percent",
+      "post_name": "easyrentcoupon53",
+      "post_date": "2025-06-04 13:39:00",
+      "description": "COUPON"
+    },
+    {
+      "id": 9602,
+      "code": "easyRentCoupon54",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon54",
+      "post_date": "2025-06-06 13:20:56",
+      "description": "COUPON"
+    },
+    {
+      "id": 9825,
+      "code": "easyRentCoupon55",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon55",
+      "post_date": "2025-06-25 14:56:58",
+      "description": "COUPON"
+    },
+    {
+      "id": 9826,
+      "code": "easyRentCoupon56",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon56",
+      "post_date": "2025-06-25 15:12:58",
+      "description": "COUPON"
+    },
+    {
+      "id": 9834,
+      "code": "easyRentCoupon57",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_cart",
+      "post_name": "easyrentcoupon57",
+      "post_date": "2025-06-26 13:32:31",
+      "description": "COUPON"
+    },
+    {
+      "id": 9950,
+      "code": "easyRentCoupon58",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon58",
+      "post_date": "2025-07-09 10:36:37",
+      "description": "COUPON"
+    },
+    {
+      "id": 11922,
+      "code": "easyRentCoupon59",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon59",
+      "post_date": "2026-04-29 09:54:41",
+      "description": "COUPON"
+    },
+    {
+      "id": 11923,
+      "code": "easyRentCoupon60",
+      "status": "publish",
+      "amount": "0",
+      "discount_type": "fixed_product",
+      "post_name": "easyrentcoupon60",
+      "post_date": "2026-04-29 10:17:00",
+      "description": "COUPON"
+    }
+  ],
+  "_schemas": {
+    "azionistato": "CREATE TABLE `azionistato` (\n  `id` int NOT NULL,\n  `statoIn` enum('Attivo','Da Attivare','Sospeso') NOT NULL,\n  `statoOut` enum('Attivo','Da Attivare','Sospeso') NOT NULL,\n  `codificaIn` varchar(30) NOT NULL,\n  `codificaOut` int NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;",
+    "menus": "CREATE TABLE `menus` (\n  `id` bigint NOT NULL,\n  `name` varchar(255) NOT NULL,\n  `link` varchar(255) NOT NULL,\n  `order` int NOT NULL,\n  `group` int NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;",
+    "payments": "CREATE TABLE `payments` (\n  `id` int NOT NULL,\n  `idVendor` int NOT NULL,\n  `amount` decimal(8,2) NOT NULL,\n  `created` date NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;",
+    "users": "CREATE TABLE `users` (\n  `id` int NOT NULL,\n  `username` varchar(255) NOT NULL,\n  `password` varchar(255) NOT NULL,\n  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  `type` enum('admin','vendor') NOT NULL DEFAULT 'vendor'\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;",
+    "vendite": "CREATE TABLE `vendite` (\n  `iduser` int NOT NULL,\n  `total` decimal(8,2) NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;",
+    "vendors": "CREATE TABLE `vendors` (\n  `id` int NOT NULL,\n  `username` varchar(24) NOT NULL,\n  `stato` enum('Attivo','Da Attivare','Sospeso') NOT NULL,\n  `coupon` varchar(24) NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=latin1;"
+  }
+}
